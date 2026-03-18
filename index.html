@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coming Soon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* BACKGROUND */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background: url('https://media.istockphoto.com/id/874309876/photo/autumn-sunset-over-the-rursee-in-the-eifel-region.jpg?s=2048x2048&w=is&k=20&c=8NzUY3IenilGZzmf_7sdknqMBAzZC8-krZNO6qApavs=') no-repeat center/cover;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            color: white;
+        }
+
+        /* DARK OVERLAY */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+
+        /* LOGO */
+        .logo img {
+            width: 90px;
+            object-fit: contain;
+        }
+
+        /* CONTACT */
+        .contact {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* CONTENT */
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        /* HEADING */
+        .content h1 {
+            font-size: clamp(40px, 6vw, 70px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 1.2s ease forwards;
+             white-space: nowrap;
+        }
+
+        /* SUBTEXT */
+        .content p {
+            font-size: 16px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 1.4s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        /* SOCIALS */
+        .socials {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 1.6s ease forwards;
+            animation-delay: 0.6s;
+        }
+
+        /* GLASS ICON */
+        .socials a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.2);
+
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+
+            transition: all 0.35s ease;
+        }
+
+        /* HOVER LIFT */
+        .socials a:hover {
+            transform: translateY(-8px) scale(1.1);
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* ANIMATION */
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <!-- TOP -->
+    <div class="top-bar">
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/vatsalvarma/Client-Project-/refs/heads/main/Asset%2011X.png" alt="Logo">
+        </div>
+        <div class="contact">
+            999-130-5444 &nbsp;&nbsp; | &nbsp;&nbsp; @greensiri.com
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+        <h1>We're coming soon</h1>
+        <p>This site is under maintanance. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</p>
+
+        <div class="socials">
+            <a href="#">G</a>
+            <a href="#">R</a>
+            <a href="#">E</a>
+            <a href="#">E</a>
+            <a href="#">N</a>
+            <a href="#">S</a>
+            <a href="#">I</a>
+            <a href="#">R</a>
+            <a href="#">I</a>
+
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
